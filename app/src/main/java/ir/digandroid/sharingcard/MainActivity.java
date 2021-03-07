@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         AppCompatImageView coverImage;
         LinearLayout layoutBtns;
         RelativeLayout layoutReveal;
-
+//
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             layoutBtns = (LinearLayout) findViewById(R.id.layout_btns);
             layoutReveal = (RelativeLayout) findViewById(R.id.layout_reveal);
             coverImage = (AppCompatImageView) findViewById(R.id.cover_image);
+
             socialIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
