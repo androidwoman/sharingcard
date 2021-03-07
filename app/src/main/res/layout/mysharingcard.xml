@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/top_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cover_image_height"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+
+                app:srcCompat="@drawable/image" />
+
+            <RelativeLayout
+                android:id="@+id/layout_reveal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cover_image_height"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/sn_color"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/layout_btns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <Button
+                        style="@style/social_button_style"
+                        android:text="View Profile"
+                        />
+
+                    <Button
+                        style="@style/social_button_style"
+                        android:text="Send Message"
+                        />
+
+                    <Button
+                        style="@style/social_button_style"
+                        android:text="Share"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/social_icon"
+            android:elevation="10dp"
+            android:layout_width="@dimen/social_icon_width_height"
+            android:layout_height="@dimen/social_icon_width_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/social_icon_margin_right"
+            android:layout_alignBottom="@id/top_frame"
+            android:layout_marginBottom="@dimen/social_icon_margin_bottom"
+            android:background="@drawable/social_icon_bg"
+            android:src="@drawable/twitter_logo"/>
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/profile_image_width_height"
+            android:layout_height="@dimen/profile_image_width_height"
+            android:layout_alignBottom="@id/top_frame"
+            android:layout_marginLeft="@dimen/profile_image_margin_left"
+            android:layout_marginBottom="@dimen/profile_image_margin_bottom"
+            app:srcCompat="@drawable/profile_image"
+            />
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_below="@id/top_frame"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#a1a1a1"
+            android:text="@string/content"/>
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_content"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:textColor="#bebebe"
+            android:text="Friday 22 FEB."/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
